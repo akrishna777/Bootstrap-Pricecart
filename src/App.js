@@ -1,5 +1,4 @@
-
-import './App.css';
+import './App.css'
 import Plans from './Plans'
 
 function App() {
@@ -16,8 +15,7 @@ function App() {
         { name: 'Dedicated Phone Support', enabled: false },
         { name: 'Free Subdomain', enabled: false },
         { name: 'Monthly Status Reports', enabled: false },
-
-      ]
+      ],
     },
     {
       name: 'Plus',
@@ -31,8 +29,7 @@ function App() {
         { name: 'Dedicated Phone Support', enabled: true },
         { name: 'Free Subdomain', enabled: true },
         { name: 'Monthly Status Reports', enabled: false },
-
-      ]
+      ],
     },
     {
       name: 'Pro',
@@ -46,24 +43,27 @@ function App() {
         { name: 'Dedicated Phone Support', enabled: true },
         { name: 'Free Subdomain', enabled: true },
         { name: 'Monthly Status Reports', enabled: true },
-
-      ]
-    }
+      ],
+    },
   ]
   return (
-    <section class="pricing py-5">
-      <div class="container">
-        <div class="row">
-          {
-            plans.map((plan, index) => {
-              return <Plans key={index} name={plan.name} price={plan.price} features={plan.features} />
-            })
-          }
-
+    <section className="pricing py-5">
+      <div className="container">
+        <div className="row">
+          {plans.map((plan, index) => {
+            return (
+              <Plans
+                key={index}
+                name={plan.name}
+                price={plan.price}
+                features={plan.features}
+              />
+            )
+          })}
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default App;
+export default App
